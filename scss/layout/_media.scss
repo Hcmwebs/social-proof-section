@@ -1,0 +1,53 @@
+@use'../abstracts/mixins' as *;
+
+@media (min-width: 768px){
+  .container{
+    background:url(../images/bg-pattern-top-desktop.svg) left top no-repeat, url(../images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+  }
+  section{
+    height:235px;
+  }
+
+
+
+  .heading{
+    flex-direction: row;
+
+    &__rating{
+      width: 55%;
+
+      .starRating{
+        width: auto;
+        flex-direction: row;
+        padding: 1rem 1.5rem;
+
+
+        &--start{
+          align-self: flex-start;
+        }
+
+        &--end{
+          align-self: flex-end;
+        }
+      }
+
+
+    }
+  }
+
+  .cards{
+    flex-direction: row;
+
+    .card{
+      &--up{
+        transform: translateY(-1rem)
+      }
+      &--down{
+        transform: translateY(1rem)
+      }
+
+    }
+
+  }
+
+}
